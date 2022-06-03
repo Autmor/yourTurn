@@ -4,6 +4,7 @@ Your Turn! is a module that adds a visual display whenever the turn changes.
 
 # Features
 Color automatically changes with player and GM color! 
+
 Hidden monsters have a black silhoutte behind them 
 
 # Maintence
