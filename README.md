@@ -1,5 +1,7 @@
 # What is this? 
 
+![Example](https://i.imgur.com/IGbA0jO.gif)
+
 Your Turn! is a module that adds a visual display whenever the turn changes. 
 
 # Features
