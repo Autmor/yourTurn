@@ -16,8 +16,8 @@
       "./styles/module.css"
     ],
     "url": "https://github.com/Autmor/yourTurn",
-	"manifest": "https://github.com/Autmor/yourTurn/blob/main/module.json",
-	"download": "https://github.com/Autmor/yourTurn/-/jobs/artifacts/4.5.1/raw/dist/yourTurn.zip?job=build",
+	"manifest": "",
+	"download": "",
 	"bugs": "https://github.com/Autmor/yourTurn/-/issues",
 	"readme": "https://github.com/Autmor/yourTurn/blob/main/README.md",
 	"flags": {
