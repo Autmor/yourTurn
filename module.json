@@ -3,14 +3,16 @@
     "title": "Your Turn!",
     "description": "A simple module which adds a user specific to do list.",
     "version": "1",
-    "minimumCoreVersion": "9",
-    "compatibleCoreVersion": "9",
     "author": "Autmor",
     "authors": [
       {
         "name": "Autmor"
       }
     ],
+    "compatibility": {
+      "minimum": "10",
+      "verified": "10"
+    },
     "esmodules":["./yourTurn.js"],
     "styles": [
       "./styles/module.css"
