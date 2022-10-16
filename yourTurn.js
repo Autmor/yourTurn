@@ -54,16 +54,16 @@ export default class TurnSubscriber{
 
         if(combat?.combatant?.isOwner && !game.user.isGM && combat?.combatant?.players[0]?.active)
         {
-            ytText = `It's your Turn, ${ytName}!`;
+            ytText = `${game.i18n.localize('YOUR-TURN.YourTurn')}, ${ytName}!`;
         }
         else if(combat?.combatant?.hidden && !game.user.isGM)
         {   
-            ytText = `Something is happening....`
+            ytText = `${game.i18n.localize('YOUR-TURN.SomethingHappens')}`
             ytImgClass.push("silhoutte");
         }
         else
         {
-            ytText = `${ytName}'s Turn!`;
+            ytText = `${ytName}'s ${game.i18n.localize('YOUR-TURN.Turn')}!`;
         }
 
         let nextCombatant = this.getNextCombatant(combat);
@@ -130,7 +130,7 @@ export default class TurnSubscriber{
         bannerDiv.id = "yourTurnBanner";
         bannerDiv.className = "yourTurnBanner";
         bannerDiv.style.height = 150;
-        bannerDiv.innerHTML = `<p id="yourTurnText" class="yourTurnText">${ytText}</p><div class="yourTurnSubheading">Round #${combat.round} Turn #${combat.turn}</div>${this.getNextTurnHtml(nextCombatant)}<div id="yourTurnBannerBackground" class="yourTurnBannerBackground" height="150"></div>`;
+        bannerDiv.innerHTML = `<p id="yourTurnText" class="yourTurnText">${ytText}</p><div class="yourTurnSubheading">${game.i18n.localize('YOUR-TURN.Round')} #${combat.round} ${game.i18n.localize('YOUR-TURN.Turn')} #${combat.turn}</div>${this.getNextTurnHtml(nextCombatant)}<div id="yourTurnBannerBackground" class="yourTurnBannerBackground" height="150"></div>`;
         
         
 
@@ -222,7 +222,7 @@ export default class TurnSubscriber{
 
         if(displayNext)
         {
-            let rv = `<div class="yourTurnSubheading last">Next Up :  <img class="${imgClass}" src="${combatant.actor.img}"></img>${name}</div>`;
+            let rv = `<div class="yourTurnSubheading last">${game.i18n.localize('YOUR-TURN.NextUp')}:  <img class="${imgClass}" src="${combatant.actor.img}"></img>${name}</div>`;
             console.log(rv);
             return rv;
         }
