@@ -1,26 +1,39 @@
 {
-    "name": "your-turn",
-    "title": "Your Turn!",
-    "description": "A simple module which adds a user specific to do list.",
-    "version": "1.00",
-    "author": "Autmor",
-    "authors": [
-      {
-        "name": "Autmor"
-      }
-    ],
-    "esmodules":["./yourTurn.js"],
-    "styles": [
-      "./styles/module.css"
-    ],
-    "url": "https://github.com/Autmor/yourTurn",
-	"manifest": "",
-	"download": "",
-	"bugs": "https://github.com/Autmor/yourTurn/-/issues",
-	"readme": "https://github.com/Autmor/yourTurn/blob/main/README.md",
-	"flags": {
-		"allowBugReporter": true
-	},
+  "name": "your-turn",
+  "title": "Your Turn!",
+  "description": "A simple module which adds a user specific to do list.",
+  "version": "1.00",
+  "authors": [
+    {
+      "name": "Autmor"
+    }
+  ],
+  "esmodules": [
+    "./yourTurn.js"
+  ],
+  "styles": [
+    "./styles/module.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "German",
+      "path": "lang/de.json"
+    }
+  ],
+  "url": "https://github.com/Autmor/yourTurn",
+  "manifest": "",
+  "download": "",
+  "bugs": "https://github.com/Autmor/yourTurn/-/issues",
+  "readme": "https://github.com/Autmor/yourTurn/blob/main/README.md",
+  "flags": {
+    "allowBugReporter": true
+  },
   "compatibility": {
     "minimum": "10",
     "verified": "10"
