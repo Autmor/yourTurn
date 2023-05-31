@@ -130,7 +130,7 @@ export default class TurnSubscriber{
         bannerDiv.id = "yourTurnBanner";
         bannerDiv.className = "yourTurnBanner";
         bannerDiv.style.height = 150;
-        bannerDiv.innerHTML = `<p id="yourTurnText" class="yourTurnText">${ytText}</p><div class="yourTurnSubheading">${game.i18n.localize('YOUR-TURN.Round')} #${combat.round} ${game.i18n.localize('YOUR-TURN.Turn')} #${combat.turn}</div>${this.getNextTurnHtml(nextCombatant)}<div id="yourTurnBannerBackground" class="yourTurnBannerBackground" height="150"></div>`;
+        bannerDiv.innerHTML = `<p id="yourTurnText" class="yourTurnText">${ytText}</p><div class="yourTurnSubheading">${game.i18n.localize('YOUR-TURN.Round')} #${combat.round} ${game.i18n.localize('YOUR-TURN.Turn')} #${combat.turn}</div>${this.getNextTurnHtml(nextCombatant,combat)}<div id="yourTurnBannerBackground" class="yourTurnBannerBackground" height="150"></div>`;
         
         
 
@@ -202,9 +202,19 @@ export default class TurnSubscriber{
         return combatant;
     }
 
-    static getNextTurnHtml(combatant)
+    static getNextTurnHtml(combatant,combat)
     {
         let displayNext = true;
+        const gameSystem = game.data.system.id;
+        console.log(gameSystem);
+        let isEnd = false;
+
+        if(gameSystem == "swade") {
+            if(combat.turn + 1 == combat.turns.length) {
+                displayNext = false;
+                isEnd = true;
+            }
+        }
 
         let name = combatant.name;
         let imgClass = "yourTurnImg yourTurnSubheading";
@@ -228,7 +238,14 @@ export default class TurnSubscriber{
         }
         else
         {
-            return  null;
+            if(isEnd && gameSystem == "swade") {
+                let ask_marker = 'modules/your-turn/img/ask_marker.png';
+                let rv = `<div class="yourTurnSubheading last">${game.i18n.localize('YOUR-TURN.NextUp')}:  <img class="${imgClass}" src="${ask_marker}"></img>???</div>`;
+                console.log(rv);
+                return rv;
+            } else {
+                return null;
+            }
         }
 
     }
