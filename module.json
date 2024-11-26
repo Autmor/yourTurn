@@ -2,7 +2,7 @@
   "name": "your-turn",
   "title": "Your Turn!",
   "description": "A simple module which adds a user specific to do list.",
-  "version": "1.00",
+  "version": "1.01",
   "authors": [
     {
       "name": "Autmor"
@@ -16,7 +16,7 @@
   ],
   "languages": [
     {
-      "lang": "en",
+      "lang": "en", 
       "name": "English",
       "path": "lang/en.json"
     },    {
@@ -35,11 +35,11 @@
       "path": "lang/fr.json"
     }
   ],
-  "url": "https://github.com/Autmor/yourTurn",
+  "url": "https://github.com/EndlessFractal/yourTurn",
   "manifest": "",
   "download": "",
-  "bugs": "https://github.com/Autmor/yourTurn/-/issues",
-  "readme": "https://github.com/Autmor/yourTurn/blob/main/README.md",
+  "bugs": "https://github.com/EndlessFractal/yourTurn/-/issues",
+  "readme": "https://github.com/EndlessFractal/yourTurn/blob/main/README.md",
   "flags": {
     "allowBugReporter": true
   },
